@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GitRepo</string>
+    <string name="message_error">Oops! Something went wrong.\nPlease try again</string>
+
+</resources>

@@ -23,9 +23,18 @@ A simple android app to hit the NY Times Most Popular Articles API and show a li
 - Mockito  for Unit Test 
 
 # Application Screenshots
-<img src="https://user-images.githubusercontent.com/8200348/155355265-fd52195c-7217-4164-8ec4-7d35cfd38679.jpg"  width="200">
+<img src="https://user-images.githubusercontent.com/8200348/160273107-e2d535d8-ef27-4cbe-9a41-f5e8cd48e6ad.jpeg" width="200">
 
-<img src="https://user-images.githubusercontent.com/8200348/155355294-96eea1c8-d0d9-40be-b6b9-582142b0d685.jpg" width="200">
+<img src="https://user-images.githubusercontent.com/8200348/160273074-59737bf4-d06f-47c2-8c11-e796d861842a.jpeg"  width="200">
+
+
+<img src="https://user-images.githubusercontent.com/8200348/160273056-7d2eabe4-3ca6-4649-9c31-2b4506824d84.jpeg" width="200">
+
+
+<img src="https://user-images.githubusercontent.com/8200348/160273037-d64a56ac-8726-4ab0-9c14-3fce483f416b.jpeg"  width="200">
+
+
+
 
 
 # Test Coverage Screenshot

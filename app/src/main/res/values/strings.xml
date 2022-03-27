@@ -8,5 +8,9 @@
     <string name="Lastreleaseversion">Last release version</string>
 
     <string name="subscribecount">Subscribe Count</string>
+    <string name="search_query_hint">Enter repository name</string>
+    <string name="little_empty">A little empty</string>
+    <string name="save_respo">Search for a repository and save it as favourite</string>
+
 
 </resources>

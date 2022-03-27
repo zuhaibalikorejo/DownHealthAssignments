@@ -46,6 +46,7 @@ class SearchFragment :   BaseFragment<FragmentSearchBinding>(R.layout.fragment_s
     override fun setUpObservers() {
 
         viewModel.gitRepoLiveData.observe(viewLifecycleOwner, {
+            dataBinding.emptyLayout.visibility = View.GONE
             dashboardItemList.clear()
             dashboardItemList.addAll(it.items!!)
             dataBinding.recyclerView.adapter?.notifyDataSetChanged()

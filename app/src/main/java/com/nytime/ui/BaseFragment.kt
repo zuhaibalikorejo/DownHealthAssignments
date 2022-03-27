@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 
 import androidx.lifecycle.Observer
 import com.nytime.base.BaseViewModel
+import com.nytime.base.ProgressDialog
 import com.nytime.nytimes.client.request.ErrorResponse
 
 /**
@@ -27,6 +28,7 @@ import com.nytime.nytimes.client.request.ErrorResponse
 abstract class BaseFragment<D : ViewDataBinding>(
     val containerLayoutId: Int,
 ) : Fragment() {
+    private val progressDialog: ProgressDialog by lazy { ProgressDialog() }
 
     protected abstract val viewModel: BaseViewModel
 
@@ -56,9 +58,9 @@ abstract class BaseFragment<D : ViewDataBinding>(
         viewModel.networkRequestProgress.observe(
             viewLifecycleOwner, Observer {
                 if (it) {
-
+                    showProgress()
                 } else {
-
+                    hideProgress()
                 }
             })
 
@@ -67,5 +69,24 @@ abstract class BaseFragment<D : ViewDataBinding>(
             Observer { it?.let { } })
 
 
+    }
+
+    fun showProgress() {
+        if (!progressDialog.isAdded) {
+            progressDialog.show(getParentFragmentManager(), ProgressDialog::class.java.canonicalName)
+
+        }
+    }
+
+    fun hideProgress() {
+        if (progressDialog.isAdded) {
+            progressDialog.dismissAllowingStateLoss()
+        }
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        hideProgress()
     }
 }

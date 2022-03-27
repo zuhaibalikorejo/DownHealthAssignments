@@ -22,17 +22,15 @@ class SplashFragment:  BaseFragment<FragmentSplashBinding>(R.layout.fragment_spl
     override val viewModel by viewModels<GitHubRepositoryActivityViewModel>()
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        splashScreen()
-        return inflater.inflate(R.layout.fragment_splash, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    splashScreen()
     }
 
 
 
-    fun splashScreen() {
+        fun splashScreen() {
 
         val SPLASH_TIME_OUT = 2000
         Handler().postDelayed({

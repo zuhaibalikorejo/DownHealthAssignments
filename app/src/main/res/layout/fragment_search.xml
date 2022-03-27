@@ -9,10 +9,32 @@
     android:layout_height="match_parent"
     >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:iconifiedByDefault="false"
+        app:searchIcon="@drawable/ic_search"
+        android:elevation="@dimen/elevation_button"
+        android:visibility="visible"
+        app:queryBackground="@android:color/transparent"
+        android:background="@drawable/bg_corners_white"
+        app:queryHint="@string/search_query_hint" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
         android:dividerHeight="0.0001dp"
         android:clipToPadding="false"
         android:padding="8dp"
@@ -22,15 +44,46 @@
         tools:listitem="@layout/recipe_item"
 
         />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/message_error"
-        style="@style/TextView.Secondary.Title.Bold"
+    <LinearLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_gravity="center"
-        android:text="@string/message_error"
-        android:textAlignment="center"
-        android:visibility="gone"
-        tools:visibility="visible" />
+
+
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_icon"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_icon"
+            />
+
+
+        <TextView
+            style="@style/TextView.Primary.Subheader.Bold.Fade"
+            android:text="@string/little_empty"
+            android:gravity="center"
+            tools:text="Title of repository" />
+
+        <TextView
+            style="@style/TextView.Secondary.Body.Fade"
+            android:maxLines="2"
+            android:gravity="center"
+            android:text="@string/save_respo"
+             />
+
+    </LinearLayout>
 
 </FrameLayout>
 

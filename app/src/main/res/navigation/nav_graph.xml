@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.nytime.ui.home.SplashFragment"
+        android:name="com.gitresp.ui.home.SplashFragment"
         android:label="Home"
         tools:layout="@layout/fragment_splash">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.nytime.ui.search.SearchFragment"
+        android:name="com.gitresp.ui.search.SearchFragment"
         android:label="Search"
         tools:layout="@layout/fragment_search">
 
@@ -29,7 +29,7 @@
 
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.nytime.ui.detailFragment.DetailFragment"
+        android:name="com.gitresp.ui.detailFragment.DetailFragment"
         android:label="Details"
         tools:layout="@layout/fragment_details">
 

@@ -12,7 +12,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.nytime.nytimes"
+        applicationId "com.gitresp"
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 1

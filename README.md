@@ -34,8 +34,7 @@ This project consists of one Activity and three fragments. The frist fragment sh
 
 
 
-<img src="https://user-images.githubusercontent.com/8200348/160278633-56b376d8-5956-4d68-a03f-f3a49556a85b.jpeg"  width="200">
-
+<img src="https://user-images.githubusercontent.com/8200348/160278689-85829c02-ee40-4c35-ae4d-0ffc0e421f37.jpeg"  width="200">
 
 
 

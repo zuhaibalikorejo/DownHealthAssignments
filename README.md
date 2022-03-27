@@ -1,7 +1,6 @@
 # GitRepositary Demo
 
 GitRepositary
-A simple android app to hit the NY Times Most Popular Articles API and show a list of Articles, that shows details when items on the list are tapped (a typical master/detail app).
 
 This project consists of one Activity and three fragments. The frist fragment show splash screen and second fragment shows the list of GitHab users, Clicking on each user enters the third fragment and views the profile information of the user.
 

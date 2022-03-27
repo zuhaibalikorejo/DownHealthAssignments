@@ -14,8 +14,8 @@ import java.lang.reflect.Type
  * <p>
  * @author zuhaib ahmed
  */
-class GitRepoRequest() : GitHubRepoBaseRequest() {
-    override fun endpoint(): String = "/repositories?q=a&per_page=50"
+class GitRepoRequest(val query:String) : GitHubRepoBaseRequest() {
+    override fun endpoint(): String = query
 
 
     override fun requestMethod(): String = RequestMethod.GET

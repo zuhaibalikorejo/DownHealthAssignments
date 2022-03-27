@@ -5,6 +5,7 @@ import android.text.TextUtils
 
 import android.view.View
 import android.widget.LinearLayout
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -21,22 +22,18 @@ class SearchFragment :   BaseFragment<FragmentSearchBinding>(R.layout.fragment_s
 
     override val viewModel by viewModels<GitHubRepositoryActivityViewModel>()
 
-
-
     private val dashboardItemList = mutableListOf<Result>()
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.fetchMostViewArticle();
+        
         dataBinding.recyclerView.layoutManager = LinearLayoutManager(context)
         dataBinding.recyclerView.addItemDecoration(DividerItemDecoration(context, LinearLayout.VERTICAL))
         val accountsAdapter = GitRepoItemAdapter(dashboardItemList,this)
         dataBinding.recyclerView.adapter = accountsAdapter
 
         setUpObservers()
+        initSearchListener()
     }
 
 
@@ -59,6 +56,23 @@ class SearchFragment :   BaseFragment<FragmentSearchBinding>(R.layout.fragment_s
 
     }
 
+
+
+    /** SearchView btn action */
+    private fun initSearchListener() {
+        dataBinding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                if (query != null && query.isNotEmpty()) {
+                    viewModel.fetchMostViewArticle(query)
+                }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return true
+            }
+        })
+    }
 
 
 }

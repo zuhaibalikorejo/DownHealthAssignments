@@ -18,8 +18,8 @@ import javax.inject.Inject
 class GitHubRepository @Inject constructor(requestExecutor: RequestExecutor) : BaseRepository(requestExecutor) {
 
 
-    fun gitRepoData(listener: ApiResponseListener<GitHubRepositoryModel>) {
-        requestExecutor.execute(GitRepoRequest(), listener)
+    fun gitRepoData(query:String,listener: ApiResponseListener<GitHubRepositoryModel>) {
+        requestExecutor.execute(GitRepoRequest(query), listener)
     }
 
 

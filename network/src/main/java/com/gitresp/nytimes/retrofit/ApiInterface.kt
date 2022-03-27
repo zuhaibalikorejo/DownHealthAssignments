@@ -3,10 +3,11 @@ package com.gitresp.nytimes.retrofit
 import retrofit2.Call
 import retrofit2.http.*
 
-
+const val GET_REPOS: String = "search/repositories"
 interface ApiInterface {
 
-    @GET("/search/repositories?q=a&per_page=50")
-    fun getRequest(): Call<String?>?
+    @GET(GET_REPOS)
+     fun getRequest(@Query("q") searchQuery: String,
+                            @Query("per_page") perPage: Int):  Call<String?>?
 
 }

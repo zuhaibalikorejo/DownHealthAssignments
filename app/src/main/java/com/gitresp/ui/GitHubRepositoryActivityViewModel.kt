@@ -29,9 +29,9 @@ class GitHubRepositoryActivityViewModel @Inject constructor(
     var gitRepoLiveData = MutableLiveData<GitHubRepositoryModel>()
 
 
-    fun fetchMostViewArticle() {
+    fun fetchMostViewArticle(query:String) {
         EspressoIdlingResourceTest.increment()
-        repository.gitRepoData(
+        repository.gitRepoData(query,
             object : ApiResponseListener<GitHubRepositoryModel> {
 
                 override fun onApiSuccess(response: ApiResponse<GitHubRepositoryModel>) {

@@ -38,7 +38,7 @@ public class RetrofitRequestExecutorImpl implements RequestExecutor {
         switch (request.requestMethod()) {
             default:
             case RequestMethod.GET:
-                call = apiInterface.getRequest();
+                call = apiInterface.getRequest(request.endpoint(),50);
                 break;
 
 

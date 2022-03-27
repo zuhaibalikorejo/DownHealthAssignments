@@ -8,7 +8,7 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 
-class MostViewArticleRepositoryTest {
+class GitRepoRepositoryTest {
 
     lateinit var githubRepository: GitHubRepository
 
@@ -22,7 +22,7 @@ class MostViewArticleRepositoryTest {
     @Test
     fun testFetchCustomerDetails() {
 
-        githubRepository.gitRepoData(
+        githubRepository.gitRepoData("a",
             object : ApiResponseListener<GitHubRepositoryModel> {
 
                 override fun onApiSuccess(response: ApiResponse<GitHubRepositoryModel>) {

@@ -37,14 +37,17 @@ A simple android app to hit the NY Times Most Popular Articles API and show a li
 
 
 
+
+
+
+
+
 # Test Coverage Screenshot
 
-<img width="700" src="https://user-images.githubusercontent.com/8200348/155325902-dc0b5607-d4bc-439a-a6f1-6893ad66e5af.png">
+<img width="700" src="https://user-images.githubusercontent.com/8200348/160274694-10516de0-c8ec-4437-a871-8dffae77237f.png">
 
 
-<img width="700" src="https://user-images.githubusercontent.com/8200348/153765310-5e8ed6e2-43e6-4527-8c72-eb7d92c2cefc.png">
-
-
+<img width="700" src="https://user-images.githubusercontent.com/8200348/160274788-3be319d9-903e-42bb-a33d-217060ca53f1.png">
 
 
 

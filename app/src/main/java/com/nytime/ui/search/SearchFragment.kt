@@ -1,6 +1,7 @@
 package com.nytime.ui.search
 
 import android.os.Bundle
+import android.text.TextUtils
 
 import android.view.View
 import android.widget.LinearLayout
@@ -14,16 +15,13 @@ import com.nytime.nytimes.R
 import com.nytime.nytimes.databinding.FragmentSearchBinding
 import com.nytime.ui.BaseFragment
 import com.nytime.ui.GitHubRepositoryActivityViewModel
+import com.nytime.ui.home.SplashFragmentDirections
 import com.nytime.ui.model.Result
 import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class SearchFragment :   BaseFragment<FragmentSearchBinding>(R.layout.fragment_search), GitRepoItemAdapter.AccountsViewHolder.ItemClickListener{
 
     override val viewModel by viewModels<GitHubRepositoryActivityViewModel>()
-
-
-//    override val viewModel: GitHubRepositoryActivityViewModel by viewModels(
-//    )
 
 
 
@@ -35,8 +33,7 @@ class SearchFragment :   BaseFragment<FragmentSearchBinding>(R.layout.fragment_s
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.fetchMostViewArticle();
-        dataBinding.recyclerView.layoutManager =
-            LinearLayoutManager(context)
+        dataBinding.recyclerView.layoutManager = LinearLayoutManager(context)
         dataBinding.recyclerView.addItemDecoration(DividerItemDecoration(context, LinearLayout.VERTICAL))
         val accountsAdapter = GitRepoItemAdapter(dashboardItemList,this)
         dataBinding.recyclerView.adapter = accountsAdapter
@@ -55,18 +52,14 @@ class SearchFragment :   BaseFragment<FragmentSearchBinding>(R.layout.fragment_s
         })
     }
 
-    override fun onItemClick(position: Int, url: String) {
-        Toast.makeText(context,"new position:",position)
 
-//        findNavController().navigate(
-//            SearchFragmentDirections.actionDetails("zuhaib")
-//        )
+    override fun onItemClick(githubrepoViewItem: Result) {
 
+        if (TextUtils.isEmpty(githubrepoViewItem.language))  githubrepoViewItem.language = ""
+        findNavController().navigate(SearchFragmentDirections.actionDetails(githubrepoViewItem.name,githubrepoViewItem.language!!,githubrepoViewItem.forks.toString(),githubrepoViewItem.openissuescount.toString(),githubrepoViewItem.defaultBranch!!,  githubrepoViewItem.owner!!.avatarUrl,githubrepoViewItem.watchers.toString()))
 
-//        var intent  = Intent(this, MovtViewDetailScreen::class.java)
-//        intent.putExtra("url",url)
-//        startActivity(intent)
     }
+
 
 
 }

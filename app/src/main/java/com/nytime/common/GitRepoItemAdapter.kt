@@ -41,28 +41,28 @@ class GitRepoItemAdapter constructor(
     class AccountsViewHolder(var dataBinding: RecipeItemBinding) :
         RecyclerView.ViewHolder(dataBinding.root) {
 
-        fun updateItem(mosvtViewItem: Result, position: Int, itemClickListener: ItemClickListener) {
+        fun updateItem(githubrepoViewItem: Result, position: Int, itemClickListener: ItemClickListener) {
 
-            dataBinding.title.text = mosvtViewItem.name
-            dataBinding.author.text = mosvtViewItem.owner?.login
-            dataBinding.description.text = mosvtViewItem.description
-            dataBinding.forks.text = ""+mosvtViewItem.forks
-            dataBinding.stars.text = ""+mosvtViewItem.stars
-            mosvtViewItem.owner.apply {
+            dataBinding.title.text = githubrepoViewItem.name
+            dataBinding.author.text = githubrepoViewItem.owner?.login
+            dataBinding.description.text = githubrepoViewItem.description
+            dataBinding.forks.text = ""+githubrepoViewItem.forks
+            dataBinding.stars.text = ""+githubrepoViewItem.stars
+            githubrepoViewItem.owner.apply {
                 Glide.with(dataBinding.image)
-                    .load(mosvtViewItem.owner!!.avatarUrl)
+                    .load(githubrepoViewItem.owner!!.avatarUrl)
                     .into(dataBinding.image)
             }
 
 
 
 
-          //  dataBinding.rowClick.setOnClickListener { itemClickListener.onItemClick(position,mosvtViewItem.name!!) }
+           dataBinding.searchItem.setOnClickListener { itemClickListener.onItemClick(githubrepoViewItem) }
         }
 
 
         interface ItemClickListener {
-            fun onItemClick(position: Int,url:String)
+            fun onItemClick(mosvtViewItem: Result)
 
         }
     }

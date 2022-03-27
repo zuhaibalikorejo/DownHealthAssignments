@@ -21,6 +21,47 @@
         android:label="Search"
         tools:layout="@layout/fragment_search">
 
+        <action
+            android:id="@+id/action_details"
+            app:destination="@id/detailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.nytime.ui.detailFragment.DetailFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+        android:name="name"
+        app:argType="string" />
+
+
+        <argument
+            android:name="language"
+            app:argType="string" />
+
+        <argument
+            android:name="fork"
+            app:argType="string" />
+
+        <argument
+            android:name="issues"
+            app:argType="string" />
+
+        <argument
+            android:name="defualt"
+            app:argType="string" />
+
+        <argument
+            android:name="avatarUrl"
+            app:argType="string" />
+
+        <argument
+            android:name="subcribecount"
+            app:argType="string" />
+
 
     </fragment>
 

@@ -25,5 +25,5 @@
     <!--corner radius-->
     <dimen name="corner_radius">11dp</dimen>
     <dimen name="corner_radius_round">24dp</dimen>
-
+    <dimen name="default_screen_margin_normal">24dp</dimen>
 </resources>

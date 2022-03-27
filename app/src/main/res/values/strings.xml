@@ -2,4 +2,11 @@
     <string name="app_name">GitRepo</string>
     <string name="message_error">Oops! Something went wrong.\nPlease try again</string>
 
+    <string name="forks">Forks</string>
+    <string name="issues">Issues</string>
+    <string name="starredby">Default</string>
+    <string name="Lastreleaseversion">Last release version</string>
+
+    <string name="subscribecount">Subscribe Count</string>
+
 </resources>

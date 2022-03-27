@@ -14,9 +14,11 @@ data  class Result(@SerializedName("name") val name: String,
                    @SerializedName("html_url") val htmlUrl: String,
                    @SerializedName("url") val apiUrl: String,
                    @SerializedName("stargazers_count") val stars: Int,
-                   @SerializedName("subscribers_count") val watchers: Int?,
+                   @SerializedName("watchers_count") val watchers: Int?,
                    @SerializedName("forks_count") val forks: Int?,
-                   @SerializedName("language") val language: String?,
+                   @SerializedName("language") var language: String?,
                    @SerializedName("homepage") val homepage: String?,
+                   @SerializedName("open_issues_count") val openissuescount: Int?,
+                   @SerializedName("default_branch") val defaultBranch: String?,
                    @SerializedName("owner") val owner: Owner?
 )

@@ -29,14 +29,12 @@ This project consists of one Activity and three fragments. The frist fragment sh
 <img src="https://user-images.githubusercontent.com/8200348/160273074-59737bf4-d06f-47c2-8c11-e796d861842a.jpeg"  width="200">
 
 
-<img src="https://user-images.githubusercontent.com/8200348/160273056-7d2eabe4-3ca6-4649-9c31-2b4506824d84.jpeg" width="200">
-
-
-<img src="https://user-images.githubusercontent.com/8200348/160273037-d64a56ac-8726-4ab0-9c14-3fce483f416b.jpeg"  width="200">
+<img src="https://user-images.githubusercontent.com/8200348/160278575-354aab8d-a1d4-45c3-8381-06ac36c73400.jpeg"  width="200">
 
 
 
 
+<img src="https://user-images.githubusercontent.com/8200348/160278633-56b376d8-5956-4d68-a03f-f3a49556a85b.jpeg"  width="200">
 
 
 

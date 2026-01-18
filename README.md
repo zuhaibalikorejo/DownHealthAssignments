@@ -7,14 +7,11 @@ This project consists of one Activity and three fragments. The frist fragment sh
 
 # Highlights
 - Model–view–viewmodel (MVVM) architectural pattern
-- Retrofit2 server call
-- DataBinding
-- Hilt
-- JetPack Component
-- Unit tests using JUnit
-- UI tests using Espresso
-- - offline App
 
+
+# Technology and tool
+ Riverpod 
+ 
 
 # Open-source libraries used
 - Retrofit2 as HTTP client
